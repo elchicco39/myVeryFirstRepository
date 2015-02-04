@@ -29,6 +29,10 @@
 /* MOBILE FIRST */
 /* XTRA SMALL DEVICES */
  .page-header { display : block; width : 100%; float : none; box-sizing : border-box; }
+ .page-header-mobilenav    { display : block; width : 20%; float : left; box-sizing : border-box;  }
+ .page-header-flag    { display : none; width : 100%; float : left; box-sizing : border-box;  }
+ .page-header-text   { display : block; width : 80%; float : left; box-sizing : border-box;  }
+ .page-header-img  { display : none;  width : 100%; float : right; box-sizing : border-box;  }
  .page-nav    { display : none;  width : 100%; float : none; box-sizing : border-box; }
  .page-main   { display : block; width : 100%; float : none; box-sizing : border-box; }
  .page-aside  { display : none;  width : 100%; float : none; box-sizing : border-box; }
@@ -39,7 +43,7 @@
 }
 
 @media screen and (min-width:768px) {
-	 body { background-color : rgba(200,100,0, 0.8); }
+	 body { background-color : rgba(200,100,0, 0.1); }
 
 	.page-header { clear : both; }
 	.page-footer { clear : both; }
@@ -54,9 +58,33 @@
 /* ENHANCED SECOND */
 /* OTHER DEVICES */
  .page-header { display : block; width : 100%; float : none; box-sizing : border-box; width: 100%;}
+ .page-header-mobilenav    { display : none;  width : 100%; float : left; box-sizing : border-box;  width: 20%;}
+ .page-header-flag    { display : block;  width : 100%; float : left; box-sizing : border-box;  width: 20%;}
+ .page-header-text   { display : block; width : 100%; float : left; box-sizing : border-box;  width: 70%;}
+ .page-header-img  { display : block;  width : 100%; float : right; box-sizing : border-box;  width: 10%;}
  .page-nav    { display : block;  width : 100%; float : left; box-sizing : border-box;  width: 30%;}
  .page-main   { display : block; width : 100%; float : left; box-sizing : border-box;  width: 50%;}
  .page-aside  { display : block;  width : 100%; float : right; box-sizing : border-box;  width: 10%;}
  .page-footer { display : block; width : 100%; float : none; box-sizing : border-box;  width: 100%; clear: both;}
 
+}
+
+
+
+/* Microclearfix (Nicolas Gallagher) */
+.page-header::before, .page-header::after {
+	content : " ";
+	display : table;
+
+	clear   : both;
+}
+.page-header { *zoom : 1; } /* IE Ergänzung! */
+
+
+/* Rundungsfehlerkompensation */
+[class*=column] + [class*=column]:last-child {
+	float : right;
+}
+[class*=column] + [class*=column].end {
+	float : left;
 }

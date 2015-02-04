@@ -1,0 +1,21 @@
+/* BASE STYLES */
+
+/* TYPOGRAPHY */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800);
+
+body {
+	font-family : "Open Sans", sans-serif;
+	font-weight : 400; 
+	/*font-size   : 11px;*/
+	line-height : 1.4; 
+}
+
+/* MULTICOLUMN */
+.content-main .columns {
+	-webkit-column-width : 10em;
+} 
+
+/* COLORS */
+body {
+	color : black;
+}
