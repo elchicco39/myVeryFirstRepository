@@ -1,0 +1,62 @@
+/*
+	RESPONSIVE LAYOUT
+
+	Anordnen von Elementen
+	Dimensionierung und Positionierung
+
+	display  : block, inline, inline-block, flex;
+	position : relative, absolute, static, fixed;
+	z-index, left, top, bottom, right
+
+	width, height (min-, max-)
+	margin, padding, [border]
+
+	box-sizing : border-box, content-box, padding-box;
+	
+	float : left, right, none;
+	clear : left, right, both;
+ */
+
+/* TEMPORÄR */
+ .page-header { background-color : rgba(0,100,200, 0.15); }
+ .page-nav    { background-color : rgba(100,200, 0, 0.15); }
+ .page-main   { background-color : rgba(200,100, 0, 0.15); }
+ .page-aside  { background-color : rgba(100,200,200, 0.15); }
+ .page-footer { background-color : rgba(0,200,100, 0.15); }
+
+
+
+/* MOBILE FIRST */
+/* XTRA SMALL DEVICES */
+ .page-header { display : block; width : 100%; float : none; box-sizing : border-box; }
+ .page-nav    { display : none;  width : 100%; float : none; box-sizing : border-box; }
+ .page-main   { display : block; width : 100%; float : none; box-sizing : border-box; }
+ .page-aside  { display : none;  width : 100%; float : none; box-sizing : border-box; }
+ .page-footer { display : block; width : 100%; float : none; box-sizing : border-box; }
+
+ body {
+	width: 100%;
+}
+
+@media screen and (min-width:768px) {
+	 body { background-color : rgba(200,100,0, 0.8); }
+
+	.page-header { clear : both; }
+	.page-footer { clear : both; }
+
+	.page-main   { float : left; width : 50%; }
+	
+	.page-nav    { display : block; float : left; width : 25%; }
+	.page-aside  { display : block; float : left; width : 25%; }
+
+
+
+/* ENHANCED SECOND */
+/* OTHER DEVICES */
+ .page-header { display : block; width : 100%; float : none; box-sizing : border-box; width: 100%;}
+ .page-nav    { display : block;  width : 100%; float : left; box-sizing : border-box;  width: 30%;}
+ .page-main   { display : block; width : 100%; float : left; box-sizing : border-box;  width: 50%;}
+ .page-aside  { display : block;  width : 100%; float : right; box-sizing : border-box;  width: 10%;}
+ .page-footer { display : block; width : 100%; float : none; box-sizing : border-box;  width: 100%; clear: both;}
+
+}
